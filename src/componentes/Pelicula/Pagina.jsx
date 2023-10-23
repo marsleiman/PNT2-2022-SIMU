@@ -29,7 +29,11 @@ const Pagina = () => {
                     cargando ? (<h2>cargando....</h2>) : <ListadoPeliculas peliculas={data} description={false} />
                 }
             </ul>
-            <button onClick={backPag}>atrás</button> | <button onClick={nextPage}>siguiente</button>
+            <button
+                onClick={backPag}
+                disabled={pagination <= 1}
+            >atrás</button> |
+            <button onClick={nextPage}>siguiente</button>
         </div>
     )
 }

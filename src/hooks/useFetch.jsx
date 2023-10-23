@@ -9,8 +9,7 @@ const useFetch = (url) => {
 
       if (response.ok) {
         const newData = await response.json();
-        setData(newData); // aca almacenamos los datos de las movies
-        //console.log(data);
+        setData(newData);
       } else {
         console.error("Error al obtener datos de peliculas");
       }
